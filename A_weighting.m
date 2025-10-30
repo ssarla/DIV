@@ -1,7 +1,3 @@
-% filepath: c:\Users\Husse\Documents\Repos\DIV\A_weighting.m
-% Read A-weighting table and plot curve, plus example dBA calculation.
-
-
 % Read the CSV (adjust path if you move the files)
 tbl = readtable(fullfile('c:\Users\Husse\Documents\Repos\DIV','A-weights.csv'));
 
