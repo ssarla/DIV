@@ -1,0 +1,18 @@
+1: Egna erfarenheter va engagemang i miljö.
+-temadagar, tema terminer
+-friluvsliv, friluvsdagar
+-natur-guidning, kurs
+
+2: Hur får man folk engagerade.
+-röd tråd. tidigt introduktion och senare utbildning.
+-se positiva för att inte tappa hoppet
+
+---------------------------------------------------------------------------------------------
+kärnkraft:
+pros: platseffektivt, enkelt att justera vid behov, inte väderberoende, stor energidensitet
+cons: även om liten risk stora konsekvenser, förvarning, brytning v bränsle
+
+vindkraft:
+pros: förnybart, inga uttsläpp, 
+cons: väderberonde, ej justerbart vid behov, inte så platseffeltivt, störande fr djurliv
+        
