@@ -16,7 +16,7 @@ n = data.n;
 %% Beräkningar
 % Synkront varvtal (rpm).
 f = 50;
-p = 2;
+p = 4;
 ns = 120 * f / p;
 
 % Inmatad effekt (W)
@@ -24,7 +24,7 @@ Pin = 3 .* P1;            % enligt Pin = 3 * P1
 Pin_alt = sqrt(3) .* U1 .* I1 .* cosphi; % alternativ beräkning
 
 % Eftersläpning
-s = (ns - n) ./ ns;
+s = ((ns - n) ./ ns) .* 100;
 
 % Avgiven effekt
 Put = 2 .* pi .* n ./ 60 .* M;
@@ -45,6 +45,10 @@ resultat = table(...
 fprintf('\nBeräknade värden:\n');
 disp(resultat);
 
+% Skriv ut resultat till CSV-fil
+outputCsvPath = 'resultat.csv';
+writetable(resultat, outputCsvPath);
+fprintf('Resultat sparat till %s\n', outputCsvPath);
 %% Diagram
 
 figure('Name','P_{in} vs P_{ut}','NumberTitle','off');
@@ -75,7 +79,7 @@ figure('Name','M vs s','NumberTitle','off');
 plot(s, M, 'o', 'MarkerEdgeColor','#6e49cc', 'MarkerFaceColor', '#6e49cc');
 grid on;
 title('Moment (M) mot Eftersläpning (s)');
-xlabel('Eftersläpning (s)');
+xlabel('Eftersläpning (%)');
 ylabel('Moment (Nm)');
 set(gcf, "Theme", "light");
 
