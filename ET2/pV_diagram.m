@@ -61,7 +61,7 @@ ylabel('Efficiency (\eta)');
 set(gcf, "Theme", "light");
 
 figure('Name','Volume vs Pressure','NumberTitle','off');
-plot(V2, p2, '-', 'MarkerEdgeColor','#0c93dd', 'MarkerFaceColor', '#0c93dd');
+plot(V2, p2, 'o', 'MarkerEdgeColor','#0c93dd', 'MarkerFaceColor', '#0c93dd');
 hold on
 plot(V2(1), p2(1), 'ro')
 hold off
