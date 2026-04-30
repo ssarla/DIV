@@ -1,5 +1,3 @@
-
-
 %% Inläsning av mätdata
 csvPath_1 = 'pv_cycle.csv';
 csvPath_2 = 'dyno.csv';
@@ -30,7 +28,8 @@ W_cycle = W_cycle_kJ * 1000; %från kJ till J
 f = 5.4; %frekvens (Hz)
 P = W_cycle * f;
 
-P_in = W_cycle * rps;
+
+P_in = 225;
 eta = P_out ./ P_in;
 
 %% Qin and Qout calculation
@@ -46,6 +45,11 @@ Qout = -sum(p_mid(dV < 0) .* dV(dV < 0)); % J
 
 Qin = Qin * 1000 * f;   % W
 Qout = Qout * 1000 * f; % W
+
+eta_th = P / Qin;
+
+fprintf('P{in}: %.2f W\n', P_in);
+fprintf('P{out}: %.2f W\n', P_out);
 
 fprintf('Q{in}: %.2f W\n', Qin);
 fprintf('Q{out}: %.2f W\n', Qout);
@@ -72,4 +76,5 @@ ylabel('Pressure (kPa)');
 set(gcf, "Theme", "light");
 
 fprintf('Arbete ut: %.2f W\n', P);
+fprintf('eta{TH}: %.2f\n', eta_th);
 fprintf('\nKlar!\n');
